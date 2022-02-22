@@ -1,1 +1,1 @@
-# -3d-reconstruction-from-accidental-motion
+# 3d-reconstruction-from-accidental-motion

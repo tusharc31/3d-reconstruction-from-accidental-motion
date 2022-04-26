@@ -2,7 +2,7 @@ import cv2
 import open3d as o3d
 # Image Directory
 
-IMAGE_DIR = '../datasets/{}_still'
+IMAGE_DIR = '../datasets/0016_still'
 # IMAGE_DIR = '../datasets/stone6_still'
 
 OUTPUT_FOLDER = '../output/'
@@ -48,10 +48,10 @@ CERES_PARAMS = dict(
                     nonmonotonic_steps = 'false'
                     )
 
-CAMERA_PARAMS = dict(fx=1016.155,
-                     fy=1017.433,
-                     cx=960.00,
-                     cy=540.00,
+CAMERA_PARAMS = dict(fx=1781.0,
+                     fy=1781.0,
+                     cx=960,
+                     cy=540,
                      k1=0,
                      k2=0,
                      s=0,

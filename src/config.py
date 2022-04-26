@@ -48,14 +48,15 @@ CERES_PARAMS = dict(
                     nonmonotonic_steps = 'false'
                     )
 
-CAMERA_PARAMS = dict(fx=1781.0,
-                     fy=1781.0,
-                     cx=240,
-                     cy=424,
+CAMERA_PARAMS = dict(fx=1016.155,
+                     fy=1017.433,
+                     cx=960.00,
+                     cy=540.00,
                      k1=0,
                      k2=0,
                      s=0,
                     )
+
 PS_PARAMS = dict(max_depth=4,
                 min_depth=2,
                 scale=2,

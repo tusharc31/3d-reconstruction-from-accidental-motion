@@ -74,7 +74,8 @@ def Modulate(cost_volume_arr):
     second = 0
     confidence = 0
     num_samples = cost_volume_arr.shape[0]
-
+    import pdb
+    pdb.set_trace()
     for r in range(cost_volume_arr.shape[1]):
         for c in range(cost_volume_arr.shape[2]):
 
@@ -170,7 +171,6 @@ def plane_sweep(folder, outfile, depth_samples, min_depth, max_depth, scale, pat
 
             x = x.reshape((x.shape[0]*x.shape[1], patch_size**2))
             warp_patches[i,:,:] = x
-
         L1_diff = Sad(ref_img_patches, warp_patches)
         score = MergeScores(L1_diff, valid_ratio = 0.5)
 

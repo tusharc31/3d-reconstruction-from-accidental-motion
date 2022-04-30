@@ -34,7 +34,7 @@ def DenseCRF(unary, img, depth_samples, params, folder, max_depth, min_depth, ou
     
     # Get initial crude depth map from photoconsistency
     if show_wta :
-    	compute_unary_image(unary, depth_samples, outfile=f'../output/{folder}/cost_volume_{depth_samples.shape[0]}_wta.png')
+    	compute_unary_image(unary, depth_samples, outfile=f'../output/cost_volume_{depth_samples.shape[0]}_wta.png')
     
     # Normalize values for each pixel location
     for r in range(unary.shape[1]):
@@ -75,7 +75,7 @@ def DenseCRF(unary, img, depth_samples, params, folder, max_depth, min_depth, ou
     
     # Upsampling depth map
     # depth_map = cv2.resize(depth_map, (config.CAMERA_PARAMS['cx'] * 2,config.CAMERA_PARAMS['cy'] * 2), interpolation=cv2.INTER_LINEAR)
-    cv2.imwrite(outfile, depth_map)
+    cv2.imwrite("output/depth_map.png", depth_map)
 
 def dense_depth(args) :
 

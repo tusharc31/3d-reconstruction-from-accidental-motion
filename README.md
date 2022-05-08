@@ -37,10 +37,3 @@ or
 
 #### Dataset Location
 - Download the dataset from [here](https://umich.box.com/shared/static/bnqgx0an4v1b0ioq80sejb7rfiuku8iy.zip) and store it in ./datasets
-
-#### TODO
-- [x] KLT
-- [x] Filtering Good Points
-- [x] Bundle Adjustment
-- [x] CRF Energy Minimization
-- [x] Integration

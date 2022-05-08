@@ -1,0 +1,52 @@
+params:
+  IMAGE_DIR: '../datasets/1_still'
+  OUTPUT_FOLDER: '../output/'
+  EXTRINSIC_FILE: '../output/extrinsics.csv'
+  INITIAL_POINT_CLOUD: '../output/initial_point_cloud.ply'
+  FINAL_POINT_CLOUD:  '../output/final_point_cloud.ply'
+  BUNDLE_FILE: '../output/bundle.out'
+  OPTICAL_FLOW_PLOT: '../output/features_klt.png'
+  SPARSE_DEPTH_MAP: '../output/sparse_depth_map.png'
+
+feature_params:
+  maxCorners: 2000
+  qualityLevel: 0.03
+  minDistance: 10
+  blockSize: 15
+
+lk_params:
+  winSize: [25,25]
+  maxLevel: 8
+  criteria: [3, 20, 0.3]
+
+CERES_PARAMS:
+  solver: '../ceres-bin/bin/bundle_adjuster'
+  maxIterations: 1000
+  input_ply: '../output/initial.ply'
+  output_ply: '../output/final.ply'
+  inner_iterations: 'true'
+  nonmonotonic_steps: 'false'
+                   
+camera_params:
+  fx: 1016.155
+  fy: 1017.433
+  cx: 960
+  cy: 540
+  k1: 0
+  k2: 0
+  s: 0
+
+ps_params: 
+  max_depth: 4
+  min_depth: 2
+  scale: 2
+  patch_radius: 1
+  num_samples: 128
+
+crf_params:
+  iters: 100
+  pos_std: "3,3"
+  rgb_std: "20,20,20"
+  weight: 1
+  max_penalty: 0.25
+  scale: 2

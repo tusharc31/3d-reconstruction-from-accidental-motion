@@ -1,4 +1,4 @@
-# 3D Reconstruction from accidental motion
+# 3D Reconstruction from accidental motion 
 
 Reconstructs a 3D scene by generating a dense depth map from a set of images capturing a scene.
 
